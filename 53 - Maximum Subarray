@@ -23,7 +23,7 @@ Step by step explaination:
 3. we will update this value as we iterate over the loop
 4. traverse from left to right in an array over all elements
 5. we keep adding the elements to sas
-6. if we get a sas value higher than the max declared
+6. if we get a sas value higher than the max declared.
 7. then we update max as that sas value
 8. if sas value is less than zero
 9. reset it to zero
