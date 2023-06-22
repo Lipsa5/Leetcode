@@ -1,0 +1,25 @@
+Company tag - Amazon
+
+/**
+ * @param {number[]} arr
+ * @return {boolean}
+ */
+var containsDuplicate = function(arr) {
+    arr.sort((a,b)=>(a-b));
+    
+    //ex sorted arr with duplicates will look like this:
+    // [1,2,2,3,4,5,6,6,6,7,8]
+    for(let i=0;i<arr.length-1;i++){
+        //condition- appears atleast 2 times
+        if(arr[i]===arr[i+1]) return true; 
+        //if two values next to each other are equal then it returns true
+    }
+    return false;
+};
+
+Step by step explaination:
+1. sort the array first
+2. example: sorted arr with duplicates will look like this: [1,2,2,3,4,5,6,6,6,7,8]
+3. condition given - appears atleast 2 times
+4. if two values next to each other are equal then it returns true
+5. else it comes out of the loop and returns false
