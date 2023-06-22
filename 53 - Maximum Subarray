@@ -1,0 +1,30 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxSubArray = function(nums) {
+    let max = -Infinity;
+    let sas = 0;
+    for (let i = 0; i < nums.length; i++) {
+        sas += nums[i];
+        if (sas > max) {
+            max = sas;
+        }
+        if (sas < 0) {
+            sas = 0;
+        }
+    }
+    return max;   
+};
+
+Step by step explaination:
+1. set max value as negative infinity
+2. declares subarraysum (sas) variable as 0
+3. we will update this value as we iterate over the loop
+4. traverse from left to right in an array over all elements
+5. we keep adding the elements to sas
+6. if we get a sas value higher than the max declared
+7. then we update max as that sas value
+8. if sas value is less than zero
+9. reset it to zero
+10. we return the maximum value obtained i.e. stored in max variable
